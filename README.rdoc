@@ -7,7 +7,7 @@ Based on: http://eigenclass.org/hiki.rb?ruby+backtrace+data
 
 == Installation
 
- sudo gem install backtrace
+ sudo gem install dtsato-backtrace --source http://gems.github.com
 
 == Dependencies
 
