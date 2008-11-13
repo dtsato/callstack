@@ -16,29 +16,29 @@ Based on: http://eigenclass.org/hiki.rb?ruby+backtrace+data
 
 == Usage
 
-To get the call stack trace, simply require +backtrace+ and use the +Object#backtrace+ method, as such:
+To get the call stack trace, simply require use the +backtrace+ method, as such:
 
-	require 'rubygems'
-	require 'backtrace'
+  require 'rubygems'
+  require 'backtrace'
 
-	def foo; bar end
-	def bar; p backtrace end
-
-	class Moo
-	  def initialize
-	    foo
-	  end
-	end
-
-	Moo.new
+  def foo; bar end
+  def bar; p backtrace end
+  
+  class Moo
+    def initialize
+      foo
+    end
+  end
+  
+  Moo.new
 
 This will output the following stack:
 
-  # >> [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4], [Moo, :initialize, "example.rb", 9], [nil, nil, "example.rb", 13]]
+  [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4], [Moo, :initialize, "example.rb", 9], [nil, nil, "example.rb", 13]]
 
 The backtrace method also accepts an optional integer argument that specifies the desired depth of the stack call trace. Using +backtrace(2)+ on the previous example would output:
 
-  # >> [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4]]
+  [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4]]
 
 == Git
 
