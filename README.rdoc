@@ -9,10 +9,6 @@ Based on: http://eigenclass.org/hiki.rb?ruby+backtrace+data
 
  sudo gem install backtrace
 
-== Download
-
-Synthesis RubyForge page ( http://rubyforge.org/projects/synthesis )
-
 == Dependencies
 
 * Ruby 1.8
