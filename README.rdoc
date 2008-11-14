@@ -1,13 +1,13 @@
-= Backtrace
+= Callstack
 
 == Description
 
-Backtrace is a simple gem that bundles a C extension to provide better stack traces (backtrace) on Ruby.
+Callstack is a simple gem that bundles a C extension to provide better stack traces on Ruby 1.8.
 Based on: http://eigenclass.org/hiki.rb?ruby+backtrace+data
 
 == Installation
 
- sudo gem install dtsato-backtrace --source http://gems.github.com
+ sudo gem install dtsato-callstack --source http://gems.github.com
 
 == Dependencies
 
@@ -16,13 +16,13 @@ Based on: http://eigenclass.org/hiki.rb?ruby+backtrace+data
 
 == Usage
 
-To get the call stack trace, simply require use the +backtrace+ method, as such:
+To get the call stack trace, simply require use the +callstack+ method, as such:
 
   require 'rubygems'
-  require 'backtrace'
+  require 'callstack'
 
   def foo; bar end
-  def bar; p backtrace end
+  def bar; p callstack end
   
   class Moo
     def initialize
@@ -36,13 +36,13 @@ This will output the following stack:
 
   [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4], [Moo, :initialize, "example.rb", 9], [nil, nil, "example.rb", 13]]
 
-The backtrace method also accepts an optional integer argument that specifies the desired depth of the stack call trace. Using +backtrace(2)+ on the previous example would output:
+The +callstack+ method also accepts an optional integer argument that specifies the desired depth of the stack call trace. Using +callstack(2)+ on the previous example would output:
 
   [[Object, :bar, "example.rb", 5], [Object, :foo, "example.rb", 4]]
 
 == Git
 
-Public clone URL: git://github.com/dtsato/backtrace.git
+Public clone URL: git://github.com/dtsato/callstack.git
 
 == License
 

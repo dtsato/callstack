@@ -3,7 +3,7 @@
 #include "node.h"
 
 static VALUE
-custom_backtrace(int argc, VALUE *args, VALUE self)
+custom_callstack(int argc, VALUE *args, VALUE self)
 {
   struct FRAME *frame = ruby_frame;
   VALUE ary;
@@ -44,6 +44,6 @@ custom_backtrace(int argc, VALUE *args, VALUE self)
   return ary;
 }
 
-void Init_backtrace() {
-	rb_define_method(rb_cObject, "backtrace", custom_backtrace, -1);
+void Init_callstack() {
+	rb_define_method(rb_cObject, "callstack", custom_callstack, -1);
 }
